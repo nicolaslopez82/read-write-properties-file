@@ -16,8 +16,8 @@ public class PropertiesCache {
     private PropertiesCache()
     {
         //Private constructor to restrict new instances
-        InputStream in = this.getClass().getClassLoader().getResourceAsStream("application.properties");
-        System.out.println("Reading all properties from the property file");
+        InputStream in = this.getClass().getClassLoader().getResourceAsStream(Paths.LOCAL_APPLICATION_PROPERTIES_FILE);
+        System.out.println("Reading all properties from the local property file");
         try {
             configProp.load(in);
         } catch (IOException e) {
