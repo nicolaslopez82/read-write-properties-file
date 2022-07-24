@@ -15,7 +15,7 @@ public class App
         //======= Reading the property file ========//
 
         //Get individual properties
-        System.out.println(PropertiesCache.getInstance().getProperty("companyName"));
+        System.out.println(PropertiesCache.getInstance().getProperty("company.name"));
         System.out.println(PropertiesCache.getInstance().getProperty("location"));
         System.out.println(PropertiesCache.getInstance().getProperty("ip"));
         System.out.println(PropertiesCache.getInstance().getProperty("environment"));
