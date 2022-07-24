@@ -1,12 +1,15 @@
 package nml;
 
+import nml.cache.PropertiesCache;
+import nml.constants.CATConstant;
+
 import java.io.IOException;
 
 /**
  * Reading properties file using Properties.load() method.
  * Also, we will use Properties.setProperty() method
  * to write a new property into the .properties file.
- *
+ * @author nicolaslopez
  */
 public class App 
 {
@@ -15,10 +18,10 @@ public class App
         //======= Reading the property file ========//
 
         //Get individual properties
-        System.out.println(PropertiesCache.getInstance().getProperty("companyName"));
-        System.out.println(PropertiesCache.getInstance().getProperty("location"));
-        System.out.println(PropertiesCache.getInstance().getProperty("ip"));
-        System.out.println(PropertiesCache.getInstance().getProperty("environment"));
+        System.out.println(PropertiesCache.getInstance().getProperty(CATConstant.COMPANY_NAME));
+        System.out.println(PropertiesCache.getInstance().getProperty(CATConstant.LOCATION_COUNTRY));
+        System.out.println(PropertiesCache.getInstance().getProperty(CATConstant.LOCATION_IP));
+        System.out.println(PropertiesCache.getInstance().getProperty(CATConstant.ENVIRONMENT));
         System.out.println('\n');
 
         //All property names
@@ -26,7 +29,7 @@ public class App
         System.out.println('\n');
 
         //Testing containsKey(string key) method
-        System.out.println("Testing containsKey(string location) method: " + PropertiesCache.getInstance().containsKey("location"));
+        System.out.println("Testing containsKey(string CATConstant.LOCATION_COUNTRY) method: " + PropertiesCache.getInstance().containsKey("location"));
 
 
         //======= Writing the property file ========//
