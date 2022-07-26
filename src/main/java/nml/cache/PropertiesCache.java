@@ -1,14 +1,14 @@
-package nml;
+package nml.cache;
 
 import java.io.*;
 import java.util.Properties;
 import java.util.Set;
 
 /**
-Reading the properties from a file application.properties which is in the classpath.
-The class PropertiesCache acts as a cache for loaded properties.
-
-The file loads the properties lazily way, but only once.
+ * Reading the properties from a file application.properties which is in the classpath.
+ * The class PropertiesCache acts as a cache for loaded properties.
+ * The file loads the properties lazily way, but only once.
+ * @author nicolaslopez
  */
 public class PropertiesCache {
     private final Properties configProp = new Properties();
@@ -25,7 +25,13 @@ public class PropertiesCache {
         }
     }
 
-    //Bill Pugh Solution for singleton pattern
+    /**
+     * Bill Pugh Solution for Singleton Pattern
+     * As we can see, until we need an instance,
+     * the LazyHolder class will not be initialized
+     * until required, and you can still use other
+     * static members of BillPughSingleton class.
+     */
     private static class LazyHolder
     {
         private static final PropertiesCache INSTANCE = new PropertiesCache();
@@ -50,6 +56,7 @@ public class PropertiesCache {
 
     /**
      * Write a new key-value pair in properties file.
+     * From my point of view, writing a file into a pipeline is not very useful.
      * Use the setProperty(k, v) method to write new property to the properties file.
      */
     public void setProperty(String key, String value){
