@@ -59,3 +59,9 @@ nb-configuration.xml
 ## OS X
 ##########################
 .DS_Store
+
+##########################
+## Templates
+##########################
+template/local/
+#This line is to avoid pushing local configurations into the master repository branch.

@@ -22,7 +22,8 @@ public class App
         System.out.println(PropertiesCache.getInstance().getProperty(CATConstant.LOCATION_COUNTRY));
         System.out.println(PropertiesCache.getInstance().getProperty(CATConstant.LOCATION_IP));
         System.out.println(PropertiesCache.getInstance().getProperty(CATConstant.ENVIRONMENT));
-
+        System.out.println(PropertiesCache.getInstance().getProperty(CATConstant.SERVER_LOCAL));
+        System.out.println(PropertiesCache.getInstance().getProperty(CATConstant.SERVER_JENKINS));
         System.out.println('\n');
 
         //All property names
@@ -30,7 +31,7 @@ public class App
         System.out.println('\n');
 
         //Testing containsKey(string key) method
-        System.out.println("Testing containsKey(string CATConstant.LOCATION_COUNTRY) method: " + PropertiesCache.getInstance().containsKey("location"));
+        System.out.println("Testing containsKey(string CATConstant.LOCATION_COUNTRY) method: " + PropertiesCache.getInstance().containsKey(CATConstant.LOCATION_COUNTRY));
 
 
         //======= Writing the property file ========//
