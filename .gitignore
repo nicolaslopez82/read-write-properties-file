@@ -63,7 +63,5 @@ nb-configuration.xml
 ##########################
 ## Templates
 ##########################
-#template/local/
-#Into the second push, we should uncomment the `#template/local/`
-#from the .gitignore to avoid pushing local configurations
-#into the master repository branch.
+template/local/
+#This line is to avoid pushing local configurations into the master repository branch.
