@@ -22,6 +22,7 @@ public class App
         System.out.println(PropertiesCache.getInstance().getProperty(CATConstant.LOCATION_COUNTRY));
         System.out.println(PropertiesCache.getInstance().getProperty(CATConstant.LOCATION_IP));
         System.out.println(PropertiesCache.getInstance().getProperty(CATConstant.ENVIRONMENT));
+
         System.out.println('\n');
 
         //All property names
